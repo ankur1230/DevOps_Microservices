@@ -14,10 +14,11 @@ jobs:
     steps:
       - checkout
       
-      - Test:
-        command: |
-        ls -al
-        pwd
+      - run:
+          name: test
+          command: |
+            ls -al
+            pwd
 
       # Download and cache dependencies
       - restore_cache:
