@@ -41,12 +41,13 @@ jobs:
       - save_cache:
           paths:
             - ./venv
-          key: v1-dependencies-{{ checksum "requirements.txt" }}
+          key: v1-dependencies-{{ checksum "project-ml-microservice-kubernetes/requirements.txt" }}
 
       # run lint!
       - run:
           name: run lint
           command: |
+            cd project-ml-microservice-kubernetes/
             . venv/bin/activate
             make lint           
 
