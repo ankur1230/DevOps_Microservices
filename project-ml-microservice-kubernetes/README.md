@@ -23,6 +23,17 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 ---
 
+### File Navigator
+
+* `app.py`: a Python flask app that serves out predictions (inference) about housing prices through API calls.
+* `Dockerfile`: a set of instructions for docker to automatically build an image.
+* `make_prediction.sh`: a script file that sends input data to a trained machine learning model and gets the predicted value for the house price.
+* `Makefile`: a handy way to run commands in the environment
+* `requirements.txt`: list of all dependencies that are required to run the project.
+* `run_docker.sh`: a script file to build an image from Dockerfile and run a docker container.
+* `run_kubernetes:sh`: a script file to run a Kubernetes pod that has a container running inside, the container will run the python application
+* `upload_docker.sh`: a script file to tag a local docker image and push it to docker hub.
+
 ## Setup the Environment
 
 * Create a virtualenv with Python 3.7 and activate it. Refer to this link for help on specifying the Python version in the virtualenv. 
@@ -41,6 +52,10 @@ source .devops/bin/activate
 1. Standalone:  `python app.py`
 2. Run in Docker:  `./run_docker.sh`
 3. Run in Kubernetes:  `./run_kubernetes.sh`
+
+### Make Prediction
+
+* Having the application running in container, in a separate terminal run `./make_prediction.sh`
 
 ### Kubernetes Steps
 
